@@ -134,6 +134,12 @@ a {
     color: var(--primary-color);
 }
 
+.logo-image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -346,34 +352,22 @@ a {
     background: var(--white);
 }
 
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-xl);
-    flex-wrap: wrap;
+.product-category {
+    margin-bottom: var(--spacing-2xl);
 }
 
-.filter-btn {
-    padding: 0.5rem 1.5rem;
-    border: 2px solid var(--gray-200);
-    background: var(--white);
-    color: var(--gray-700);
-    border-radius: var(--border-radius-full);
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-base);
+.product-category:last-child {
+    margin-bottom: 0;
 }
 
-.filter-btn:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-.filter-btn.active {
-    background: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
+.category-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
 }
 
 .products-grid {
@@ -424,7 +418,7 @@ a {
 }
 
 .product-image {
-    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    background: var(--white);
     padding: var(--spacing-lg);
     display: flex;
     justify-content: center;
@@ -529,6 +523,12 @@ a {
 .about-card svg {
     width: 100%;
     max-width: 300px;
+}
+
+.about-logo {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
 }
 
 .about-text {
@@ -653,6 +653,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all var(--transition-base);
+}
+
+.info-icon:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
 }
 
 .info-icon svg {
@@ -670,6 +676,15 @@ a {
 .info-content p {
     color: var(--gray-600);
     line-height: 1.6;
+}
+
+.info-content a {
+    transition: all var(--transition-fast);
+    display: inline-block;
+}
+
+.info-content a:hover svg {
+    transform: scale(1.2);
 }
 
 /* ===== Footer ===== */
@@ -698,6 +713,12 @@ a {
 
 .footer-logo .logo-icon {
     color: var(--primary-light);
+}
+
+.footer-logo .logo-image {
+    background-color: var(--gray-900);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-md);
 }
 
 .footer-description {

@@ -40,33 +40,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== Product Filter =====
-const filterButtons = document.querySelectorAll('.filter-btn');
+// ===== Product Cards Reference =====
 const productCards = document.querySelectorAll('.product-card');
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        
-        const filter = button.getAttribute('data-filter');
-        
-        // Filter products with animation
-        productCards.forEach((card, index) => {
-            const category = card.getAttribute('data-category');
-            
-            if (filter === 'all' || category === filter) {
-                setTimeout(() => {
-                    card.style.display = 'flex';
-                    card.style.animation = 'fadeInUp 0.5s ease-out';
-                }, index * 50);
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    });
-});
 
 // ===== Smooth Scroll for Anchor Links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
