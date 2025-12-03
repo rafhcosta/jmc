@@ -529,15 +529,15 @@ a {
 
 .brand-item {
     background: var(--white);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 100px;
+    width: 180px;
+    height: 120px;
 }
 
 .brand-item:hover {
