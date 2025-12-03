@@ -102,7 +102,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    background: var(--white);
+    background: #67a3c2;
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: box-shadow var(--transition-base);
@@ -193,8 +193,8 @@ a {
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
-    padding: calc(80px + var(--spacing-2xl)) 0 var(--spacing-2xl);
-    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    padding: calc(80px + var(--spacing-2xl)) 0 var(--spacing-lg);
+    background: var(--white);
     overflow: hidden;
 }
 
@@ -255,6 +255,15 @@ a {
     position: relative;
     z-index: 1;
     filter: drop-shadow(0 10px 30px rgba(2, 132, 199, 0.3));
+}
+
+.hero-banner {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+    border-radius: var(--border-radius-xl);
+    filter: drop-shadow(0 10px 30px rgba(2, 132, 199, 0.2));
 }
 
 .hero-wave {
@@ -348,12 +357,12 @@ a {
 
 /* ===== Products Section ===== */
 .products {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
     background: var(--white);
 }
 
 .product-category {
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 .product-category:last-child {
@@ -364,16 +373,16 @@ a {
     font-size: var(--font-size-2xl);
     font-weight: 600;
     color: var(--gray-900);
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
     border-bottom: 3px solid var(--primary-color);
     display: inline-block;
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
 }
 
 .product-card {
@@ -419,11 +428,19 @@ a {
 
 .product-image {
     background: var(--white);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform var(--transition-base);
 }
 
 .product-image svg {
@@ -433,20 +450,21 @@ a {
     transition: transform var(--transition-base);
 }
 
-.product-card:hover .product-image svg {
-    transform: scale(1.1);
+.product-card:hover .product-image svg,
+.product-card:hover .product-image img {
+    transform: scale(1.05);
 }
 
 .product-info {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
     flex: 1;
 }
 
 .product-name {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     font-weight: 600;
     color: var(--gray-900);
 }
@@ -493,6 +511,52 @@ a {
     text-decoration: line-through;
     font-weight: 400;
     margin-left: var(--spacing-xs);
+}
+
+/* ===== Brands Section ===== */
+.brands {
+    padding: var(--spacing-xl) 0;
+    background: var(--gray-50);
+}
+
+.brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.brand-item {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+}
+
+.brand-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.brand-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(30%);
+    opacity: 0.8;
+    transition: all var(--transition-base);
+}
+
+.brand-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* ===== About Section ===== */
@@ -880,7 +944,7 @@ a {
     }
     
     .hero {
-        padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-lg);
+        padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-sm);
     }
     
     .products-grid {
