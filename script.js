@@ -62,33 +62,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Form Handling =====
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Construct email with form data
-    const subject = encodeURIComponent(`Contato de ${data.name}`);
-    const body = encodeURIComponent(
-        `Nome: ${data.name}\n` +
-        `E-mail: ${data.email}\n` +
-        `Telefone: ${data.phone}\n\n` +
-        `Mensagem:\n${data.message || 'Nenhuma mensagem informada'}`
-    );
-    
-    // Open email client with pre-filled data
-    window.location.href = `mailto:jcmcomeserv@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Reset form after a short delay
-    setTimeout(() => {
-        contactForm.reset();
-    }, 500);
-});
 
 // ===== Intersection Observer for Scroll Animations =====
 const observerOptions = {
@@ -113,19 +86,6 @@ document.querySelectorAll('.product-card, .stat-item, .info-item').forEach(el =>
     observer.observe(el);
 });
 
-// ===== Phone Number Formatting =====
-const phoneInput = document.getElementById('phone');
-
-phoneInput.addEventListener('input', (e) => {
-    let value = e.target.value.replace(/\D/g, '');
-    
-    if (value.length <= 11) {
-        value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
-        value = value.replace(/(\d)(\d{4})$/, '$1-$2');
-    }
-    
-    e.target.value = value;
-});
 
 // ===== Product Card Hover Effect Enhancement =====
 productCards.forEach(card => {
@@ -144,7 +104,7 @@ scrollToTopBtn.innerHTML = '↑';
 scrollToTopBtn.className = 'scroll-to-top';
 scrollToTopBtn.style.cssText = `
     position: fixed;
-    bottom: 30px;
+    bottom: 100px;
     right: 30px;
     width: 50px;
     height: 50px;
