@@ -9,18 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-944327173"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-944327173');
+    </script>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav container">
             <div class="nav-logo">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L8 6V14C8 16.2091 9.79086 18 12 18C14.2091 18 16 16.2091 16 14V6L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M5 22H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span class="logo-text">JMC águas e bebidas</span>
+                <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="logo-image">
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -40,10 +43,10 @@
     <section class="hero" id="home">
         <div class="hero-content container">
             <div class="hero-text">
-                <h1 class="hero-title">Água Mineral Pura e Cristalina</h1>
+                <h1 class="hero-title">Água Mineral e Bebidas</h1>
                 <p class="hero-description">
-                    Descubra a pureza da natureza em cada gota. Oferecemos água mineral e bebidas de qualidade premium 
-                    em diversos tamanhos e sabores para atender suas necessidades.
+                    Oferecemos água mineral e bebidas de qualidade para atender suas necessidades.
+                    Trabalhamos com diversos produtos como água mineral, água com gás, refrigerantes, sucos, energéticos, chás, bebedouros e bombas de água.
                 </p>
                 <div class="hero-buttons">
                     <a href="#products" class="btn btn-primary">Ver Produtos</a>
@@ -51,21 +54,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-circle"></div>
-                <svg class="hero-illustration" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="100" cy="250" rx="50" ry="10" fill="#0ea5e9" opacity="0.2"/>
-                    <path d="M80 80C80 80 70 90 70 110V220C70 235.464 82.536 248 98 248H102C117.464 248 130 235.464 130 220V110C130 90 120 80 120 80" fill="url(#waterGradient)" opacity="0.7"/>
-                    <path d="M75 70C75 70 70 75 70 85V220C70 235.464 82.536 248 98 248H102C117.464 248 130 235.464 130 220V85C130 75 125 70 125 70L100 50L75 70Z" stroke="#0ea5e9" stroke-width="3" fill="none"/>
-                    <path d="M75 70L100 50L125 70" stroke="#0ea5e9" stroke-width="3"/>
-                    <circle cx="90" cy="150" r="8" fill="#fff" opacity="0.4"/>
-                    <circle cx="105" cy="170" r="5" fill="#fff" opacity="0.3"/>
-                    <defs>
-                        <linearGradient id="waterGradient" x1="100" y1="80" x2="100" y2="248" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.3"/>
-                            <stop offset="100%" stop-color="#0284c7" stop-opacity="0.6"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
+                <img src="images/banner_jmc.png" alt="JMC Águas e Bebidas" class="hero-banner">
             </div>
         </div>
         <div class="hero-wave">
@@ -81,84 +70,152 @@
             <div class="section-header">
                 <h2 class="section-title">Nossos Produtos</h2>
                 <p class="section-description">
-                    Escolha o tamanho ou tipo de bebida ideal para você. Todos os nossos produtos são de alta qualidade.
+                    Trabalhamos com diversos produtos e marcas para atender às suas necessidades.
                 </p>
             </div>
 
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="galao">Galões</button>
+            <!-- Água Mineral -->
+            <div class="product-category">
+                <h3 class="category-title">Água Mineral</h3>
+                <div class="products-grid">
+                    <!-- Galão 20L -->
+                    <div class="product-card">
+                        <div class="product-badge">Mais Vendido</div>
+                        <div class="product-image">
+                            <img src="images/galao_20l.png" alt="Galão 20 Litros">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Galão 20 Litros</h3>
+                            <p class="product-description">Ideal para residências e escritórios. Nosso galão de 20L garante água pura por mais tempo.</p>
+                            <div class="product-features">
+                                <span class="feature">✓ Retornável</span>
+                                <span class="feature">✓ 20L</span>
+                                <span class="feature">✓ Econômico</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">Consulte</span>
+                                <a href="#contact" class="btn btn-small">Solicitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galão 10L -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/galao_10l.png" alt="Galão 10 Litros">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Galão 10 Litros</h3>
+                            <p class="product-description">Perfeito para famílias menores. Praticidade e qualidade em um tamanho compacto.</p>
+                            <div class="product-features">
+                                <span class="feature">✓ Retornável</span>
+                                <span class="feature">✓ 10L</span>
+                                <span class="feature">✓ Compacto</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">Consulte</span>
+                                <a href="#contact" class="btn btn-small">Solicitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Garrafa Pet -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/lindoya.png" alt="Garrafas Pet">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Garrafas Pet</h3>
+                            <p class="product-description">Prática e versátil, ideal para levar para qualquer lugar. Trabalhamos com as melhores marcas do mercado.</p>
+                            <div class="product-features">
+                                <span class="feature">✓ Portátil</span>
+                                <span class="feature">✓ Prático</span>
+                                <span class="feature">✓ Diversos Tamanhos</span>
+                                <span class="feature">✓ Diversas Marcas</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">Consulte</span>
+                                <a href="#contact" class="btn btn-small">Solicitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="products-grid">
-                <!-- Galão 20L -->
-                <div class="product-card" data-category="galao">
-                    <div class="product-badge">Mais Vendido</div>
-                    <div class="product-image">
-                        <svg viewBox="0 0 150 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="75" cy="190" rx="35" ry="8" fill="#0ea5e9" opacity="0.2"/>
-                            <rect x="50" y="50" width="50" height="130" rx="8" fill="url(#grad1)" opacity="0.3"/>
-                            <rect x="50" y="50" width="50" height="130" rx="8" stroke="#0284c7" stroke-width="3" fill="none"/>
-                            <rect x="60" y="35" width="30" height="20" rx="3" fill="none" stroke="#0284c7" stroke-width="2"/>
-                            <line x1="65" y1="70" x2="85" y2="70" stroke="#fff" stroke-width="2" opacity="0.5"/>
-                            <circle cx="65" cy="100" r="6" fill="#fff" opacity="0.3"/>
-                            <text x="75" y="120" text-anchor="middle" font-size="20" font-weight="bold" fill="#0284c7">20L</text>
-                            <defs>
-                                <linearGradient id="grad1" x1="75" y1="50" x2="75" y2="180">
-                                    <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2"/>
-                                    <stop offset="100%" stop-color="#0284c7" stop-opacity="0.5"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Galão 20 Litros</h3>
-                        <p class="product-description">Ideal para residências e escritórios. Nosso galão de 20L garante água pura por mais tempo.</p>
-                        <div class="product-features">
-                            <span class="feature">✓ Retornável</span>
-                            <span class="feature">✓ 20L</span>
-                            <span class="feature">✓ Econômico</span>
+            <!-- Outros Produtos -->
+            <div class="product-category">
+                <h3 class="category-title">Outros Produtos</h3>
+                <div class="products-grid">
+                    <!-- Bebidas Diversas -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/bebidas_diversas.png" alt="Bebidas Diversas">
                         </div>
-                        <div class="product-footer">
-                            <span class="product-price">A consultar</span>
-                            <a href="#contact" class="btn btn-small">Solicitar</a>
+                        <div class="product-info">
+                            <h3 class="product-name">Bebidas Diversas</h3>
+                            <p class="product-description">Variedade de bebidas para todos os gostos como refrigerantes, sucos, energéticos, chás, entre outros.</p>
+                            <div class="product-features">
+                                <span class="feature">✓ Variedade</span>
+                                <span class="feature">✓ Qualidade</span>
+                                <span class="feature">✓ Diversos Sabores</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">Consulte</span>
+                                <a href="#contact" class="btn btn-small">Solicitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bomba de Água -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/bomba_agua.png" alt="Bomba de Água">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bomba de Água</h3>
+                            <p class="product-description">Bomba manual para galões de água. Prática e fácil de usar, ideal para casa ou escritório.</p>
+                            <div class="product-features">
+                                <span class="feature">✓ Manual</span>
+                                <span class="feature">✓ Prática</span>
+                                <span class="feature">✓ Fácil Instalação</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">Consulte</span>
+                                <a href="#contact" class="btn btn-small">Solicitar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Galão 10L -->
-                <div class="product-card" data-category="galao">
-                    <div class="product-image">
-                        <svg viewBox="0 0 150 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="75" cy="190" rx="30" ry="7" fill="#0ea5e9" opacity="0.2"/>
-                            <rect x="55" y="60" width="40" height="120" rx="6" fill="url(#grad2)" opacity="0.3"/>
-                            <rect x="55" y="60" width="40" height="120" rx="6" stroke="#0284c7" stroke-width="3" fill="none"/>
-                            <rect x="63" y="45" width="24" height="18" rx="3" fill="none" stroke="#0284c7" stroke-width="2"/>
-                            <circle cx="68" cy="100" r="5" fill="#fff" opacity="0.3"/>
-                            <text x="75" y="130" text-anchor="middle" font-size="18" font-weight="bold" fill="#0284c7">10L</text>
-                            <defs>
-                                <linearGradient id="grad2" x1="75" y1="60" x2="75" y2="180">
-                                    <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2"/>
-                                    <stop offset="100%" stop-color="#0284c7" stop-opacity="0.5"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Galão 10 Litros</h3>
-                        <p class="product-description">Perfeito para famílias menores. Praticidade e qualidade em um tamanho compacto.</p>
-                        <div class="product-features">
-                            <span class="feature">✓ Retornável</span>
-                            <span class="feature">✓ 10L</span>
-                            <span class="feature">✓ Compacto</span>
-                        </div>
-                        <div class="product-footer">
-                            <span class="product-price">A consultar</span>
-                            <a href="#contact" class="btn btn-small">Solicitar</a>
-                        </div>
-                    </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossas Marcas</h2>
+                <p class="section-description">
+                    Confira abaixo algumas das marcas com as quais trabalhamos.
+                </p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <img src="images/lindoya_logo.png" alt="Lindoya">
                 </div>
-
+                <div class="brand-item">
+                    <img src="images/minalba_logo.png" alt="Minalba">
+                </div>
+                <div class="brand-item">
+                    <img src="images/nestle_logo.png" alt="Nestlé">
+                </div>
+                <div class="brand-item">
+                    <img src="images/purissima_logo.png" alt="Puríssima">
+                </div>
+                <div class="brand-item">
+                    <img src="images/sao_lourenco_logo.png" alt="São Lourenço">
+                </div>
             </div>
         </div>
     </section>
@@ -169,19 +226,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-card">
-                        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="150" cy="150" r="120" fill="url(#aboutGrad)" opacity="0.2"/>
-                            <path d="M150 80C150 80 120 100 120 140C120 170 135 185 150 185C165 185 180 170 180 140C180 100 150 80 150 80Z" fill="#0ea5e9" opacity="0.4"/>
-                            <circle cx="140" cy="130" r="12" fill="#fff" opacity="0.5"/>
-                            <circle cx="155" cy="150" r="8" fill="#fff" opacity="0.4"/>
-                            <path d="M100 220C100 220 120 200 150 200C180 200 200 220 200 220" stroke="#0284c7" stroke-width="3" stroke-linecap="round"/>
-                            <defs>
-                                <linearGradient id="aboutGrad" x1="150" y1="30" x2="150" y2="270">
-                                    <stop offset="0%" stop-color="#0ea5e9"/>
-                                    <stop offset="100%" stop-color="#0284c7"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                        <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="about-logo">
                     </div>
                 </div>
                 <div class="about-text">
@@ -218,28 +263,7 @@
                     Faça seu pedido ou tire suas dúvidas. Estamos prontos para atendê-lo!
                 </p>
             </div>
-            <div class="contact-content">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" required placeholder="Seu nome">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
-                </form>
+            <div class="contact-content contact-content-centered">
                 <div class="contact-info">
                     <div class="info-item">
                         <div class="info-icon">
@@ -253,33 +277,36 @@
                             <p>Brooklin - São Paulo, 04562-000</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.09501 3.90347 2.12788 3.62476 2.21649 3.36162C2.30511 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>Telefone</h4>
-                            <p>
-                                (11) 96442-7838
-                                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-left: 6px; color: #25D366;">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    <div class="info-row">
+                        <div class="info-item">
+                            <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer" class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.09501 3.90347 2.12788 3.62476 2.21649 3.36162C2.30511 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <br>(11) 3044-5371
-                            </p>
+                            </a>
+                            <div class="info-content">
+                                <h4>Telefone</h4>
+                                <p>
+                                    (11) 96442-7838
+                                    <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-left: 6px; color: #25D366;">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>E-mail</h4>
-                            <p>jmccomeserv@gmail.com</p>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>E-mail</h4>
+                                <p>jmccomeserv@gmail.com</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -293,12 +320,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L8 6V14C8 16.2091 9.79086 18 12 18C14.2091 18 16 16.2091 16 14V6L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M5 22H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <span class="logo-text">JCM águas e bebidas</span>
+                        <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="logo-image">
                     </div>
                     <p class="footer-description">
                         Água mineral pura e cristalina, direto da fonte para sua casa.
@@ -317,7 +339,8 @@
                     <div class="footer-column">
                         <h4>Produtos</h4>
                         <ul>
-                            <li><a href="#products">Galões</a></li>
+                            <li><a href="#products">Água Mineral</a></li>
+                            <li><a href="#products">Outros Produtos</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -328,7 +351,7 @@
                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
                                 </svg>
                             </a>
-                            <a href="https://wa.me/5511986867960" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                 </svg>
@@ -343,7 +366,13 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contato via WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
     <script src="script.js"></script>
 </body>
 </html>
-
