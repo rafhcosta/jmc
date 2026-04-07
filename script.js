@@ -148,14 +148,7 @@ scrollToTopBtn.addEventListener('mouseleave', function() {
 });
 
 // ===== Add Loading Animation on Page Load =====
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease-in';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
+// Nota: animação de fade no body foi removida pois prejudica o LCP (atrasa renderização visível)
 
 // ===== Button Click Effects =====
 document.querySelectorAll('.btn').forEach(button => {
@@ -188,17 +181,7 @@ document.querySelectorAll('.btn').forEach(button => {
     });
 });
 
-// Add ripple animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes ripple {
-        to {
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
+// Ripple animation definida no styles.css
 
 // ===== Console Welcome Message =====
 console.log('%c🌊 JCM águas e bebidas - Água Mineral Premium 🌊', 'color: #0284c7; font-size: 20px; font-weight: bold;');

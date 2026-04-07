@@ -867,6 +867,30 @@ a {
     border-top: 1px solid var(--gray-800);
     text-align: center;
     color: var(--gray-500);
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.footer-legal {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.footer-legal a {
+    color: var(--gray-500);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast);
+}
+
+.footer-legal a:hover {
+    color: var(--primary-light);
+}
+
+.footer-separator {
+    margin: 0 0.5rem;
+    color: var(--gray-700);
 }
 
 /* ===== Animations ===== */
@@ -899,6 +923,28 @@ a {
     50% {
         transform: scale(1.1);
     }
+}
+
+/* Respeitar preferência do usuário por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* content-visibility para seções abaixo do fold (melhora tempo de renderização inicial) */
+.products,
+.brands,
+.about,
+.contact,
+.footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
 }
 
 /* ===== Responsive Design ===== */
@@ -1005,6 +1051,13 @@ a {
     .filter-btn {
         padding: 0.4rem 1rem;
         font-size: var(--font-size-sm);
+    }
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2);
+        opacity: 0;
     }
 }
 
