@@ -239,31 +239,13 @@ a {
     animation: fadeInRight 1s ease-out;
 }
 
-.hero-circle {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
-    border-radius: 50%;
-    opacity: 0.1;
-    animation: pulse 3s ease-in-out infinite;
-}
-
-.hero-illustration {
-    width: 100%;
-    max-width: 300px;
-    position: relative;
-    z-index: 1;
-    filter: drop-shadow(0 10px 30px rgba(2, 132, 199, 0.3));
-}
-
 .hero-banner {
     width: 100%;
     max-width: 450px;
     position: relative;
     z-index: 1;
     border-radius: var(--border-radius-xl);
-    filter: drop-shadow(0 10px 30px rgba(2, 132, 199, 0.2));
+    box-shadow: 0 10px 30px rgba(2, 132, 199, 0.2);
 }
 
 .hero-wave {
@@ -329,10 +311,6 @@ a {
     background: var(--gray-200);
     border-color: var(--gray-400);
     color: var(--gray-800);
-}
-
-.btn-full {
-    width: 100%;
 }
 
 /* ===== Section Headers ===== */
@@ -401,10 +379,6 @@ a {
     box-shadow: var(--shadow-xl);
 }
 
-.product-card.hidden {
-    display: none;
-}
-
 .product-badge {
     position: absolute;
     top: var(--spacing-sm);
@@ -416,14 +390,6 @@ a {
     font-size: var(--font-size-sm);
     font-weight: 600;
     z-index: 10;
-}
-
-.badge-new {
-    background: var(--success-color);
-}
-
-.badge-promo {
-    background: #ef4444;
 }
 
 .product-image {
@@ -505,14 +471,6 @@ a {
     color: var(--primary-color);
 }
 
-.price-old {
-    font-size: var(--font-size-sm);
-    color: var(--gray-400);
-    text-decoration: line-through;
-    font-weight: 400;
-    margin-left: var(--spacing-xs);
-}
-
 /* ===== Brands Section ===== */
 .brands {
     padding: var(--spacing-xl) 0;
@@ -549,13 +507,11 @@ a {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    filter: grayscale(30%);
-    opacity: 0.8;
-    transition: all var(--transition-base);
+    opacity: 0.85;
+    transition: opacity var(--transition-base);
 }
 
 .brand-item:hover img {
-    filter: grayscale(0%);
     opacity: 1;
 }
 
@@ -613,7 +569,7 @@ a {
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
     margin-top: var(--spacing-md);
 }
@@ -656,52 +612,6 @@ a {
 .contact-content-centered .contact-info {
     max-width: 700px;
     width: 100%;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
-.form-group label {
-    font-weight: 500;
-    color: var(--gray-700);
-    font-size: var(--font-size-sm);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 0.75rem;
-    border: 2px solid var(--gray-200);
-    border-radius: var(--border-radius-md);
-    font-family: var(--font-family);
-    font-size: var(--font-size-base);
-    transition: border-color var(--transition-base);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.form-group textarea {
-    resize: vertical;
 }
 
 .contact-info {
@@ -916,15 +826,6 @@ a {
     }
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
 /* Respeitar preferência do usuário por menos movimento */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -1044,14 +945,6 @@ a {
         font-size: var(--font-size-2xl);
     }
     
-    .filter-buttons {
-        gap: 0.5rem;
-    }
-    
-    .filter-btn {
-        padding: 0.4rem 1rem;
-        font-size: var(--font-size-sm);
-    }
 }
 
 @keyframes ripple {
@@ -1059,6 +952,49 @@ a {
         transform: scale(2);
         opacity: 0;
     }
+}
+
+/* ===== Scroll Animations ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Scroll To Top Button ===== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: var(--primary-dark);
 }
 
 /* ===== WhatsApp Floating Button ===== */
