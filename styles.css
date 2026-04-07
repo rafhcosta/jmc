@@ -910,7 +910,13 @@ a {
     .hero {
         padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-sm);
     }
-    
+
+    /* Animações desativadas no mobile: evitam atraso no LCP */
+    .hero-text,
+    .hero-image {
+        animation: none;
+    }
+
     .products-grid {
         grid-template-columns: 1fr;
     }
@@ -918,11 +924,7 @@ a {
     .about-stats {
         grid-template-columns: 1fr;
     }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
+
     .footer-links {
         grid-template-columns: 1fr;
     }
