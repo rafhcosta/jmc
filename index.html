@@ -3,27 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de produtos de água mineral - galões, garrafas e copos">
-    <title>Água Mineral Premium - Nossos Produtos</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="JMC Bebidas - Entrega de água mineral, galões 20L e 10L, bebidas diversas e bomba d'água no Brooklin, São Paulo. Atendimento via WhatsApp.">
+    <title>JMC Bebidas - Água Mineral e Bebidas em São Paulo</title>
+
+    <!-- DNS prefetch para origens externas -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://wa.me">
+
+    <!-- Preconnect para Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-944327173"></script>
+
+    <!-- Preload LCP: mobile carrega 450w, desktop 900w -->
+    <link rel="preload" as="image" media="(max-width: 768px)"
+          href="images/banner_jmc_450w.webp"
+          imagesrcset="images/banner_jmc_450w.webp 450w, images/banner_jmc.webp 900w"
+          imagesizes="100vw"
+          type="image/webp">
+    <link rel="preload" as="image" media="(min-width: 769px)"
+          href="images/banner_jmc.webp"
+          type="image/webp">
+
+    <!-- Google Fonts: pesos usados (400,500,600,700), carregamento não-bloqueante -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- CSS crítico inline: elimina bloqueio de renderização para conteúdo acima do fold -->
+    <style>
+:root{--primary-color:#0284c7;--primary-dark:#0369a1;--primary-light:#0ea5e9;--white:#fff;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-300:#d1d5db;--gray-400:#9ca3af;--gray-500:#6b7280;--gray-600:#4b5563;--gray-700:#374151;--gray-800:#1f2937;--gray-900:#111827;--spacing-xs:.5rem;--spacing-sm:1rem;--spacing-md:1.5rem;--spacing-lg:2rem;--spacing-xl:3rem;--spacing-2xl:4rem;--font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-size-sm:.875rem;--font-size-base:1rem;--font-size-lg:1.125rem;--font-size-xl:1.25rem;--font-size-2xl:1.5rem;--font-size-3xl:1.875rem;--font-size-4xl:2.25rem;--font-size-5xl:3rem;--border-radius-sm:.375rem;--border-radius-md:.5rem;--border-radius-lg:.75rem;--border-radius-xl:1rem;--border-radius-full:9999px;--shadow-sm:0 1px 2px 0 rgba(0,0,0,.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,.1);--shadow-xl:0 20px 25px -5px rgba(0,0,0,.1);--transition-fast:150ms ease-in-out;--transition-base:300ms ease-in-out;--transition-slow:500ms ease-in-out}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-family);font-size:var(--font-size-base);line-height:1.6;color:var(--gray-800);background-color:var(--white);overflow-x:hidden}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--spacing-md)}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.header{position:fixed;top:0;left:0;right:0;background:#67a3c2;box-shadow:var(--shadow-sm);z-index:1000;transition:box-shadow var(--transition-base)}
+.header.scrolled{box-shadow:var(--shadow-md)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:var(--spacing-sm) var(--spacing-md)}
+.nav-logo{display:flex;align-items:center;gap:var(--spacing-xs);font-weight:700;font-size:var(--font-size-xl);color:var(--primary-color)}
+.logo-image{height:50px;width:auto;object-fit:contain}
+.nav-menu{display:flex;list-style:none;gap:var(--spacing-lg)}
+.nav-link{font-weight:500;color:var(--gray-700);transition:color var(--transition-fast);position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary-color);transition:width var(--transition-base)}
+.nav-toggle{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:var(--spacing-xs)}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--gray-700);transition:transform var(--transition-base)}
+.hero{position:relative;padding:calc(80px + var(--spacing-2xl)) 0 var(--spacing-lg);background:var(--white);overflow:hidden}
+.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-xl);align-items:center;position:relative;z-index:2}
+.hero-text{animation:fadeInUp 1s ease-out}
+.hero-title{font-size:var(--font-size-5xl);font-weight:700;color:var(--gray-900);line-height:1.2;margin-bottom:var(--spacing-md)}
+.hero-description{font-size:var(--font-size-lg);color:var(--gray-600);margin-bottom:var(--spacing-lg)}
+.hero-buttons{display:flex;gap:var(--spacing-sm);flex-wrap:wrap}
+.hero-image{position:relative;display:flex;justify-content:center;align-items:center;animation:fadeInRight 1s ease-out}
+.hero-banner{width:100%;max-width:450px;position:relative;z-index:1;border-radius:var(--border-radius-xl);box-shadow:0 10px 30px rgba(2,132,199,.2)}
+.hero-wave{position:absolute;bottom:0;left:0;right:0;z-index:1}
+.hero-wave svg{display:block;width:100%;height:auto}
+.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:var(--border-radius-lg);font-weight:600;font-size:var(--font-size-base);text-align:center;cursor:pointer;border:2px solid transparent;transition:all var(--transition-base);white-space:nowrap}
+.btn-primary{background:var(--primary-color);color:var(--white);box-shadow:var(--shadow-md)}
+.btn-outline{background:transparent;color:var(--primary-color);border-color:var(--primary-color)}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+@media(max-width:1024px){.hero-content{grid-template-columns:1fr;text-align:center}.hero-buttons{justify-content:center}.hero-image{order:-1}}
+@media(max-width:768px){:root{--font-size-5xl:2rem;--font-size-4xl:1.75rem;--font-size-3xl:1.5rem}.nav-toggle{display:flex}.nav-menu{position:fixed;top:60px;left:-100%;width:100%;background:var(--white);flex-direction:column;padding:var(--spacing-lg);box-shadow:var(--shadow-lg);transition:left var(--transition-base)}.nav-menu.active{left:0}.hero{padding:calc(80px + var(--spacing-lg)) 0 var(--spacing-sm)}.hero-text,.hero-image{animation:none}}
+@media(max-width:480px){.container{padding:0 var(--spacing-sm)}.hero-title{font-size:var(--font-size-3xl)}}
+    </style>
+
+    <!-- styles.css: carregamento não-bloqueante (abaixo do fold) -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+    <!-- Google Tag Manager -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-944327173');
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KRW3N89X');
     </script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRW3N89X" height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Header -->
     <header class="header">
         <nav class="nav container">
             <div class="nav-logo">
-                <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="logo-image">
+                <picture>
+                    <source srcset="images/logo_jmc.webp" type="image/webp">
+                    <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="logo-image"
+                         width="63" height="50" decoding="async">
+                </picture>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -54,11 +130,19 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/banner_jmc.png" alt="JMC Águas e Bebidas" class="hero-banner">
+                <!-- LCP image: fetchpriority high, sem lazy, decoding sync, srcset responsivo -->
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="images/banner_jmc_450w.webp 450w, images/banner_jmc.webp 900w"
+                        sizes="(max-width: 768px) 100vw, 450px">
+                    <img src="images/banner_jmc.png" alt="JMC Águas e Bebidas" class="hero-banner"
+                         width="900" height="600" fetchpriority="high" decoding="sync">
+                </picture>
             </div>
         </div>
         <div class="hero-wave">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" fill="white"/>
             </svg>
         </div>
@@ -82,7 +166,11 @@
                     <div class="product-card">
                         <div class="product-badge">Mais Vendido</div>
                         <div class="product-image">
-                            <img src="images/galao_20l.png" alt="Galão 20 Litros">
+                            <picture>
+                                <source srcset="images/galao_20l.webp" type="image/webp">
+                                <img src="images/galao_20l.png" alt="Galão 20 Litros"
+                                     width="102" height="192" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Galão 20 Litros</h3>
@@ -102,7 +190,11 @@
                     <!-- Galão 10L -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/galao_10l.png" alt="Galão 10 Litros">
+                            <picture>
+                                <source srcset="images/galao_10l.webp" type="image/webp">
+                                <img src="images/galao_10l.png" alt="Galão 10 Litros"
+                                     width="114" height="185" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Galão 10 Litros</h3>
@@ -122,7 +214,11 @@
                     <!-- Garrafa Pet -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/lindoya.png" alt="Garrafas Pet">
+                            <picture>
+                                <source srcset="images/lindoya.webp" type="image/webp">
+                                <img src="images/lindoya.png" alt="Garrafas Pet"
+                                     width="400" height="400" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Garrafas Pet</h3>
@@ -149,7 +245,11 @@
                     <!-- Bebidas Diversas -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/bebidas_diversas.png" alt="Bebidas Diversas">
+                            <picture>
+                                <source srcset="images/bebidas_diversas.webp" type="image/webp">
+                                <img src="images/bebidas_diversas.png" alt="Bebidas Diversas"
+                                     width="400" height="400" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Bebidas Diversas</h3>
@@ -169,7 +269,11 @@
                     <!-- Bomba de Água -->
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="images/bomba_agua.png" alt="Bomba de Água">
+                            <picture>
+                                <source srcset="images/bomba_agua.webp" type="image/webp">
+                                <img src="images/bomba_agua.png" alt="Bomba de Água"
+                                     width="372" height="304" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Bomba de Água</h3>
@@ -202,19 +306,39 @@
             </div>
             <div class="brands-grid">
                 <div class="brand-item">
-                    <img src="images/lindoya_logo.png" alt="Lindoya">
+                    <picture>
+                        <source srcset="images/lindoya_logo.webp" type="image/webp">
+                        <img src="images/lindoya_logo.png" alt="Lindoya"
+                             width="152" height="148" loading="lazy" decoding="async">
+                    </picture>
                 </div>
                 <div class="brand-item">
-                    <img src="images/minalba_logo.png" alt="Minalba">
+                    <picture>
+                        <source srcset="images/minalba_logo.webp" type="image/webp">
+                        <img src="images/minalba_logo.png" alt="Minalba"
+                             width="160" height="60" loading="lazy" decoding="async">
+                    </picture>
                 </div>
                 <div class="brand-item">
-                    <img src="images/nestle_logo.png" alt="Nestlé">
+                    <picture>
+                        <source srcset="images/nestle_logo.webp" type="image/webp">
+                        <img src="images/nestle_logo.png" alt="Nestlé"
+                             width="122" height="108" loading="lazy" decoding="async">
+                    </picture>
                 </div>
                 <div class="brand-item">
-                    <img src="images/purissima_logo.png" alt="Puríssima">
+                    <picture>
+                        <source srcset="images/purissima_logo.webp" type="image/webp">
+                        <img src="images/purissima_logo.png" alt="Puríssima"
+                             width="160" height="68" loading="lazy" decoding="async">
+                    </picture>
                 </div>
                 <div class="brand-item">
-                    <img src="images/sao_lourenco_logo.png" alt="São Lourenço">
+                    <picture>
+                        <source srcset="images/sao_lourenco_logo.webp" type="image/webp">
+                        <img src="images/sao_lourenco_logo.png" alt="São Lourenço"
+                             width="160" height="100" loading="lazy" decoding="async">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -226,17 +350,21 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="about-card">
-                        <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="about-logo">
+                        <picture>
+                            <source srcset="images/logo_jmc.webp" type="image/webp">
+                            <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="about-logo"
+                                 width="253" height="200" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">Sobre a JCM águas e bebidas</h2>
                     <p class="about-description">
-                        Há mais de 15 anos no mercado, a <strong>JCM águas e bebidas</strong> se dedica a fornecer água mineral 
+                        Há mais de 15 anos no mercado, a <strong>JCM águas e bebidas</strong> se dedica a fornecer água mineral
                         e bebidas de altíssima qualidade, e com um atendimento de excelência.
                     </p>
                     <p class="about-description">
-                        Nossa missão é garantir que cada gota de água que chega até você seja pura, cristalina e 
+                        Nossa missão é garantir que cada gota de água que chega até você seja pura, cristalina e
                         rica em minerais essenciais para sua saúde e bem-estar.
                     </p>
                     <div class="about-stats">
@@ -267,7 +395,7 @@
                 <div class="contact-info">
                     <div class="info-item">
                         <div class="info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -280,7 +408,7 @@
                     <div class="info-row">
                         <div class="info-item">
                             <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer" class="info-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.09501 3.90347 2.12788 3.62476 2.21649 3.36162C2.30511 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
@@ -289,7 +417,7 @@
                                 <p>
                                     (11) 96442-7838
                                     <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer">
-                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-left: 6px; color: #25D366;">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-left: 6px; color: #25D366;" aria-hidden="true">
                                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                         </svg>
                                     </a>
@@ -298,7 +426,7 @@
                         </div>
                         <div class="info-item">
                             <div class="info-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
@@ -320,7 +448,11 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="logo-image">
+                        <picture>
+                            <source srcset="images/logo_jmc.webp" type="image/webp">
+                            <img src="images/logo_jmc.png" alt="JMC Comércios e Serviços" class="logo-image"
+                                 width="63" height="50" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                     <p class="footer-description">
                         Água mineral pura e cristalina, direto da fonte para sua casa.
@@ -347,12 +479,12 @@
                         <h4>Redes Sociais</h4>
                         <div class="social-links">
                             <a href="https://www.facebook.com/share/1GBeMrWTPi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
                                 </svg>
                             </a>
                             <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                                 </svg>
                             </a>
@@ -362,17 +494,24 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 JCM águas e bebidas. Todos os direitos reservados.</p>
+                <p class="footer-legal">
+                    CNPJ: 48.575.883/0001-94
+                    <span class="footer-separator">·</span>
+                    <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                </p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5511964427838" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contato via WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
-    <script src="script.js"></script>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Voltar ao topo">↑</button>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
